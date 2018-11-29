@@ -9,5 +9,7 @@ namespace WebSite2.Models
 	{
 		public string CardName { get; set; }
 		public int Type{ get; set; }
-	}
+        public string GathererUrl { get; set; }
+        public string PictureUrl { get; set; }
+    }
 }

@@ -5,31 +5,40 @@
 @model List<CardViewModel>
 
 
-@{ 
+@{
 
-	var mojeIme = "Mario";
+    var mojeIme = "Mario";
 
 }
 
+<br />
+<br />
+<br />
+<br />
 
-
-<h1> ovo je glavni naslov  </h1>
+<h1 id="naslov"> ovo je glavni naslov  </h1>
 <h2> ovo je podnaslov </h2>
-<p>  ovo je paragraf, zato mu je oznaka P   </p>
-<p>  Nikac  </p>
+
+<div id="mojDiv">
+
+
+    <p>  ovo je paragraf, zato mu je oznaka P   </p>
+    <a href="http://gatherer.wizards.com">link za gatherer</a>
 
 
 
-<p> Bok, danas smo analizirali karte: </p>
+    <p id="paragraf"> Bok, danas smo analizirali karte: </p>
 
-@{ 
-	foreach (CardViewModel card in Model){
-		<p>@card.CardName tipa @card.Type</p>
-	}
-}
-
-
-
-
-
-<p> bok bok, danas smo analizirali kartu @Model[0].CardName    </p>
+    <ul>
+        @foreach (CardViewModel card in Model)
+        {
+            <li class="clanListe">
+                <a href="@card.GathererUrl">@card.CardName tipa @card.Type</a>
+                <img class="cardPicture" src="@card.PictureUrl" alt="Goyf" />
+            </li>
+        }
+    </ul>
+        
+    
+    <p> bok bok, danas smo analizirali kartu @Model[0].CardName    </p>
+</div>

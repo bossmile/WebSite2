@@ -12,9 +12,14 @@ namespace WebSite2.Controllers
 	{
 		public IActionResult Index()
 		{
-			var card1 = new CardViewModel();
-			card1.CardName = "Goyf";
-			card1.Type = 1;
+            var card1 = new CardViewModel
+            {
+                CardName = "Goyf",
+                Type = 1,
+                GathererUrl = "http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=457123",
+                PictureUrl = "https://img.scryfall.com/cards/large/en/mma/166.jpg?1517813031"
+            };
+
 
             var card2 = new CardViewModel
             {
