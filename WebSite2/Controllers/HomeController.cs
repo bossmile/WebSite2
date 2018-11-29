@@ -16,11 +16,13 @@ namespace WebSite2.Controllers
 			card1.CardName = "Goyf";
 			card1.Type = 1;
 
-			var card2 = new CardViewModel();
-			card2.CardName = "Wrath of god";
-			card2.Type = 2;
+            var card2 = new CardViewModel
+            {
+                CardName = "Wrath of god",
+                Type = 2
+            };
 
-			var card3 = new CardViewModel();
+            var card3 = new CardViewModel();
 			card3.CardName = "Kompanija";
 			card3.Type = 3;
 
