@@ -16,29 +16,69 @@
 <br />
 <br />
 
-<h1 id="naslov"> ovo je glavni naslov  </h1>
-<h2> ovo je podnaslov </h2>
+<h1 id="naslov"> Welcome to the GEDERER  </h1>
+<h2> where the <a href="https://magic.wizards.com/en">&copy;Magic</a> happens </h2>
 
 <div id="mojDiv">
 
 
-    <p>  ovo je paragraf, zato mu je oznaka P   </p>
-    <a href="http://gatherer.wizards.com">link za gatherer</a>
+    <p>  Prvi korak je : <a href="http://gatherer.wizards.com">link za fejk gatherer!</a>  </p>
 
 
+    <br />
+    <br />
 
-    <p id="paragraf"> Bok, danas smo analizirali karte: </p>
+    <p>  Onda slijedi cika Sammelkarte : <a href="https://www.cardmarket.com/en/Magic">cika Sammelkarte!</a>  </p>
+
+
+    <br />
+    <br />
+   
+
+    <p id="paragraf"> <strong>Danas na tapeti su pet sexy karata: </strong></p>
 
     <ul>
         @foreach (CardViewModel card in Model)
         {
-            <li class="clanListe">
-                <a href="@card.GathererUrl">@card.CardName tipa @card.Type</a>
-                <img class="cardPicture" src="@card.PictureUrl" alt="Goyf" />
+            
+
+         <li class="clanListe">
+                <a href="@card.GathererUrl">@card.CardName  @if (card.Type == 1)
+                {
+                    string Creature = ("Creature");
+                    <p>@Creature </p>;
+                }
+                else if (card.Type == 2)
+                {
+                    string Sorcery = ("Sorcery");
+                    <p>@Sorcery </p>;
+                }
+                else if (card.Type == 3)
+                {
+                    string Instant = ("Instant");
+                    <p>@Instant </p>;
+
+                }
+                else if (card.Type == 4)
+                {
+                    string Artifact = ("Artifact");
+                    <p>@Artifact</p>;
+                }
+                else if (card.Type == 5)
+                {
+                    string Enchantment = ("Enchantment");
+                    <p>@Enchantment</p>;
+                }
+                </a>
+                <img class="cardPicture" src="@card.PictureUrl" title="@card.CardName" />
+                <br />
+                <br />
             </li>
         }
     </ul>
-        
-    
-    <p> bok bok, danas smo analizirali kartu @Model[0].CardName    </p>
+    <br />
+    <br />
+    <br />
+
+    <p><strong> Najjaca od svih je naravno @Model[0].CardName, i mean just look at him</strong></p>
 </div>

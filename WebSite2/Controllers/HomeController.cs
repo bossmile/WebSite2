@@ -17,38 +17,64 @@ namespace WebSite2.Controllers
                 CardName = "Goyf",
                 Type = 1,
                 GathererUrl = "http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=457123",
-                PictureUrl = "https://img.scryfall.com/cards/large/en/mma/166.jpg?1517813031"
+                PictureUrl = "https://img.scryfall.com/cards/large/front/4/2/42e56220-81c3-4440-9f97-8616d630a8ee.jpg?1541423404"
             };
 
 
             var card2 = new CardViewModel
             {
                 CardName = "Wrath of god",
-                Type = 2
+                Type = 2,
+                GathererUrl = "http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=429866",
+                PictureUrl = "https://img.scryfall.com/cards/large/en/p07/1.jpg?1517813031"
             };
 
-            var card3 = new CardViewModel();
-			card3.CardName = "Kompanija";
-			card3.Type = 3;
+            var card3 = new CardViewModel
+            {
+                CardName = "Kompanija",
+                Type = 3,
+                GathererUrl = "http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=394519",
+                PictureUrl = "https://pm1.narvii.com/6205/662e4a6714d9020da5a1b3cc55c9213d492d15c4_hq.jpg"
+            };
 
-			List<CardViewModel> listaKarataZaNaslovnicu = new List<CardViewModel>();
+            var card4 = new CardViewModel
+            {
+                CardName = "Sol Ring",
+                Type = 4,
+                GathererUrl = "http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=420611",
+                PictureUrl = "https://img.scryfall.com/cards/large/en/mps/24.jpg?1517813031",
+            };
+
+            var card5 = new CardViewModel
+            {
+                CardName = "Phyrexian Arena",
+                Type = 5,
+                GathererUrl = "http://gatherer.wizards.com/Pages/Card/Details.aspx?name=phyrexian%20arena",
+                PictureUrl = "https://img.scryfall.com/cards/large/en/cn2/144.jpg?1517813031",
+            };
+
+            List<CardViewModel> listaKarataZaNaslovnicu = new List<CardViewModel>();
 			listaKarataZaNaslovnicu.Add(card1);
 			listaKarataZaNaslovnicu.Add(card2);
 			listaKarataZaNaslovnicu.Add(card3);
+            listaKarataZaNaslovnicu.Add(card4);
+            listaKarataZaNaslovnicu.Add(card5);
+
+
 
 			return View(listaKarataZaNaslovnicu);
 		}
 
 		public IActionResult About()
 		{
-			ViewData["Message"] = "Your application description page.";
+			ViewData["Message"] = "Parody page pls dont sue us wizards";
 
 			return View();
 		}
 
 		public IActionResult Contact()
 		{
-			ViewData["Message"] = "Your contact page.";
+			ViewData["Message"] = "We r poor plz gibe moni";
 
 			return View();
 		}
