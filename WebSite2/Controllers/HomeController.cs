@@ -84,7 +84,29 @@ namespace WebSite2.Controllers
 			return View();
 		}
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Commander()
+        {
+            ViewData["Message"] = "Commander stuffzz";
+
+
+            return View();
+        }
+
+        public IActionResult Extra()
+        {
+            ViewData["Message"] = "Extra fancy stufffzzz";
+
+            return View();
+        }
+
+        public IActionResult Spicy()
+        {
+            ViewData["Message"] = "Spicy content coming real soon";
+
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
